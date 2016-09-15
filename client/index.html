@@ -1,0 +1,19 @@
+<!DOCTYPE html>
+<html ng-app="store">
+  <head> 
+    <link rel="stylesheet" type="text/css" href="bootstrap.min.css" />
+  </head>
+  <body>
+    <script type="text/javascript" src="angular.min.js"> </script>
+    <script type="text/javascript" src="bundle.js"> </script>
+
+    <div ng-controller="MainController">
+      <input type="number" ng-model="totalValues"> Enter no. </input>
+      <span> {{ totalValues }} </span>
+      <div>
+        <paginator-control-directive page-change-callback="mainPageChange(pageNum)" total-values='totalValues' values-per-page='valuesPerPage'></paginator-control-directive>
+      </div>
+
+    </div>
+  </body>
+</html>
